@@ -11,7 +11,7 @@ D_PLUS = 1.3
 D = 1.0
 F = 0
 ERROR = -1
-letter_grade = str(input("Enter a letter grade: "))
+letter_grade = input("Enter a letter grade: ")
 if letter_grade == "A+" or letter_grade == "A":
     grade_points = A
 elif letter_grade == "A-":
@@ -33,7 +33,7 @@ elif letter_grade == "D+":
 elif letter_grade == "D":
     grade_points = D
 elif letter_grade == "F":
-    grade_points = ERROR
+    grade_points = F
 else:
     grade_points = ERROR
 if grade_points == ERROR:
