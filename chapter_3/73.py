@@ -1,9 +1,12 @@
 # Caesar Cipher
 message = input("Your message: ")
-shift = input("shift amount: ")
-shift_n = int(shift)
-s = list(message)
-i = 0
-for i in range(len(message)):
-    s[i] = s[i + shift_n]
-print(s)
+shift = int(input("shift amount: "))
+new_message = ""
+for ch in message:
+    if (ch >= "a" and ch <= "z") or (ch >= "A" and ch <= "Z"):
+        pos = ord(ch)
+        new_char = chr(pos + shift)
+        new_message += new_char
+    else:
+        new_message += ch
+print("The shifted message is", new_message)
