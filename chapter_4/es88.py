@@ -4,9 +4,6 @@ third = float(input("Enter a third number: "))
 
 
 def main(a, b, c):
-    great_n = 0
-    med_n = 0
-    small_n = 0
     if a > b:
         if b > c:
             great_n = a
