@@ -6,12 +6,16 @@ RANDOM_LENGTH_MIN = 7
 RANDOM_LENGTH_MAX = 10
 
 
-def main():
+def print_pw():
+    print(gen())
+
+
+def gen():
     pw = ''
     for i in range(0, random.randint(RANDOM_LENGTH_MIN, RANDOM_LENGTH_MAX)):
         pw += chr(random.randint(POS_ASCII_START, POS_ASCII_END))
-    print(pw)
+    return pw
 
 
 if __name__ == '__main__':
-    main()
+    print_pw()
