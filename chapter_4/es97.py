@@ -10,6 +10,19 @@ def precedence(n):
         return -1
 
 
+def precedence_unary(n):
+    if n == '+' or n == '-':
+        return 1
+    elif n == '*' or n == '/':
+        return 2
+    elif n == 'u+' or n == 'u-':
+        return 3
+    elif n == '^':
+        return 4
+    else:
+        return -1
+
+
 def main():
     op = input("Enter an operator: ")
     if precedence(op) != -1:
