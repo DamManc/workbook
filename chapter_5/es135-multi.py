@@ -5,7 +5,7 @@ import random
 
 
 def find_prime(name, n1, n2):
-    print(f'{name} starts with {n2} as limit (not included)')
+    print(f'{name} starts ---> {n2} as limit (not included)')
     primes = []
     for i in range(n1, n2):
         primes.append(i)
@@ -34,8 +34,8 @@ def threads():
     threads = []
     for i in range(5):
         limit = random.randrange(5, 100)
-        #limit = 1000_000
-        name = f'Treads{i}'
+        #limit = 10000
+        name = f'Tread{i}'
         t = threading.Thread(target=find_prime, args=(name, init, limit))
         t.start()
         threads.append(t)
@@ -45,10 +45,5 @@ def threads():
     print(f'Elapsed time {round(finish - start, 2)}')
 
 
-def main():
-    #limit = int(input('Enter a number as limit of primes numbers to visualize: '))
-    threads()
-
-
 if __name__ == '__main__':
-    main()
+    threads()
