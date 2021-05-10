@@ -21,10 +21,16 @@ def spelling_with_el(input_usr):
     # recursive case
     if len(input_usr) > 1 and (input_usr[0].upper() + input_usr[1].lower()) in elements:
         new_string = input_usr[2:]
-        return input_usr[0].upper() + input_usr[1].lower() + spelling_with_el(new_string)
+        try:
+            return input_usr[0].upper() + input_usr[1].lower() + spelling_with_el(new_string)
+        except TypeError:
+            return False
     elif len(input_usr) > 0 and input_usr[0].upper() in elements:
         new_string = input_usr[1:]
-        return input_usr[0].upper() + spelling_with_el(new_string)
+        try:
+            return input_usr[0].upper() + spelling_with_el(new_string)
+        except TypeError:
+            return False
     else:
         return False
 
