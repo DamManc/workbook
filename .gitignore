@@ -1,12 +1,3 @@
 .idea/
 .vscode/
-chapter_1/__pycache__
-chapter_2/__pycache__
-chapter_3/__pycache__
-chapter_4/__pycache__
-chapter_5/__pycache__
-chapter_6/__pycache__
-chapter_7/__pycache__
-chapter_8/__pycache__
-chapter_9/__pycache__
-chapter_10/__pycache__
+*/__pycache__
