@@ -1,8 +1,10 @@
 # Exercise 131: Infix to Postfix
+import sys
+sys.path.append('/home/dam/code/py/workbook/chapter_4')
 from es129 import token
 from es130 import mark_unary
-from chapter_4.es96 import is_integer
-from chapter_4.es97 import precedence_unary
+from es96 import is_integer
+from es97 import precedence_unary
 
 
 def in_to_post(list):

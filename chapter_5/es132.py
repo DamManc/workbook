@@ -13,7 +13,7 @@ def eval_post(list):
             last_item = values[-1]
             del values[-1]
             values.append(-last_item)
-        elif token == '+' or token == '-' or token == '*' or token == '/' or token == '^':
+        elif token in '+-*/^':
             right = values[-1]
             del values[-1]
             left = values[-1]
