@@ -18,10 +18,8 @@ def main():
         for word, l in histo.items():
             list_words += [(l, word)]
         list_words.sort(reverse=True)
-        longest_w = 0, ''
-        for l,word in list_words:
-            if l > longest_w[0]:
-                longest_w = l, word
+        max_v = list_words[0][0]
+        longest_w = [value for value in list_words if value[0] == max_v]
         print(f'The longest word/words is/are {longest_w}')
         print(f'Words of that length that occurred in the file {histo}')
         fin.close()
